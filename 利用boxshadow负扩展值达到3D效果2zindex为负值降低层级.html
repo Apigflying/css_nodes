@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>用BOXSHADOW做出3D效果1</title>
+<style>
+*{
+margin:0;
+padding:0;}
+body{
+	background:#e7e7e7;}
+div{
+	width:70%;
+	height:400px;
+	margin:30px auto;
+	background:#fff;
+	position:relative;
+	}
+div:before,div:after{
+	position:absolute;
+	z-index:-1;/*让元素层级下降，被覆盖*/
+	content:"";
+	bottom:15px;
+	left:10px;
+	width:50%;
+	top:80%;
+	max-width:300px;
+	background:#777;
+	box-shadow:0 15px 10px #777;
+	transform:rotate(-3deg);}
+div:after{
+	transform:rotate(3deg);
+	right:10px;
+	left:auto;}
+</style>
+
+</head>
+
+<body>
+	<div>
+    </div>
+
+</body>
+</html>

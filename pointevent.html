@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#follow{
+				width:30px;
+				height:30px;
+				background:rgba(0,255,0,0.5);
+				border-radius: 50%;;
+				position: absolute;
+				pointer-events: none;
+			}
+			#box0{
+				width:100px;
+				height:100px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="follow"></div>
+		<div id="box0">点我变色</div>
+		<script>
+			var follow=document.getElementById('follow');
+			var box0=document.getElementById('box0');
+			document.onmousemove=function(ev){
+				var ev=ev||event;
+				follow.style.left=ev.clientX-15+'px';
+				follow.style.top=ev.clientY-15+'px';
+			} 
+			box0.onclick=function(){
+				this.style.backgroundColor='blue';
+			}
+		</script>
+	</body>
+</html>
+
