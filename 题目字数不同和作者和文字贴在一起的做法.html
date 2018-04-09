@@ -1,60 +1,81 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" content="">
-		<title></title>
+
+<head>
+	<meta charset="UTF-8" content="">
+	<title></title>
 	<style type="text/css">
-		*{
-			padding: 0;margin: 0;
+		* {
+			padding: 0;
+			margin: 0;
 		}
-div{
-	height: 30px;
-	width:300px;
-	border: 1px solid black;
-	vertical-align:top;
-	box-sizing: border-box;
-	margin-bottom: -1px;
-	
-}
-p{ float:left;
-	position: relative;
-	padding-left: 10px;
-	font-size: 16px;
-	padding-right: 50px;
-	overflow: hidden;
-	height: 30px;
-	line-height: 30px;
-	/*white-space: nowrap;
-	text-overflow: ellipsis;*/
-}
-span{
-	position: absolute;
-	right:0;
-	top:0;
-	width:40px;
-}
 
+		div {
+			height: 30px;
+			width: 300px;
+			border: 1px solid black;
+			vertical-align: top;
+			box-sizing: border-box;
+			margin-bottom: -1px
+		}
+
+		p {
+			float: left;
+			position: relative;
+			padding-left: 10px;
+			font-size: 16px;
+			padding-right: 50px;
+			overflow: hidden;
+			height: 30px;
+			line-height: 30px;
+		}
+
+		span {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 40px;
+		}
+		/*
+			增加下面内容，可以让a标签内多余的内容，变为...
+		*/
+		p {
+			max-width: 300px;
+			box-sizing: border-box;
+		}
+
+		p a {
+			float: left;
+			width: 100%;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
 	</style>
-	</head>
-	<body>  
-		<div>
-			<p>
-				<a href="">是考虑是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是到是</a><span>作者</span>
-			
-			</p>
-		</div>
-			<div>
-			<p>
-				<a href="">是是考虑到是到是</a><span>作者</span>
-			
-			</p>
-		</div>
-			<div>
-			<p>
-				<a href="">是考虑是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是到是</a><span>作者</span>
-			
-			</p>
-		</div>
-	</body>
-</html>
+</head>
 
+<body>
+	<div>
+		<p>
+			<a href="">是考虑是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是到是</a>
+			<span>作者</span>
+
+		</p>
+	</div>
+	<div>
+		<p>
+			<a href="">是是考虑到是到是</a>
+			<span>作者</span>
+
+		</p>
+	</div>
+	<div>
+		<p>
+			<a href="">是考虑是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是到是</a>
+			<span>作者</span>
+
+		</p>
+	</div>
+</body>
+
+</html>
