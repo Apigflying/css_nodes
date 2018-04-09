@@ -10,8 +10,18 @@
 			margin: 0;
 		}
 
+		.clear:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		.clear {
+			zoom: 1;
+		}
+
 		div {
-			height: 30px;
+			height: 80px;
 			width: 300px;
 			border: 1px solid black;
 			vertical-align: top;
@@ -36,9 +46,11 @@
 			top: 0;
 			width: 40px;
 		}
+
 		/*
 			增加下面内容，可以让a标签内多余的内容，变为...
 		*/
+
 		p {
 			max-width: 300px;
 			box-sizing: border-box;
@@ -59,15 +71,17 @@
 		<p>
 			<a href="">是考虑是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是是考虑到是到是</a>
 			<span>作者</span>
-
 		</p>
 	</div>
 	<div>
-		<p>
-			<a href="">是是考虑到是到是</a>
-			<span>作者</span>
-
-		</p>
+		<!-- 不加clear，会导致下面的h2与这个p标签的内容在同一行 -->
+		<h5 class="clear">
+			<p>
+				<a href="">是是考虑到是到是</a>
+				<span>作者</span>
+			</p>
+		</h5>
+		<h2>abc</h2>
 	</div>
 	<div>
 		<p>
