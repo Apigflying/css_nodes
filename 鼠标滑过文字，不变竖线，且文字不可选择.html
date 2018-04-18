@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p {
+				padding: 30px 20px;
+			}
+			::selection{
+				color:red;
+				background: gold;
+			}
+			.p2 {
+				cursor:default;
+			}
+			.p3{
+				user-select:none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p class="p1">
+			这是一些文字 ，这些文字在鼠标滑过的时候，鼠标会变为竖线形状。可以通过单击拖拽选择文字
+		</p>
+		<p class="p2">
+			这是一些文字 ，设置cursor属性为default; 当鼠标滑过这些文字的时候，鼠标不会变为竖线，且文字可以被选择
+		</p>
+		<p class="p3">
+			这也是一些文字，设置user-select属性为none; 鼠标滑过时候，不变为竖线，也不能选择；
+		</p>
+	</body>
+
+</html>
