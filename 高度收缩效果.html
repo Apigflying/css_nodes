@@ -1,58 +1,81 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<style>
-			*{
-				margin:0;padding:0;
+			* {
+				margin: 0;
+				padding: 0;
 				list-style: none;
 			}
-			h5{
-				width:200px;
+			
+			h5 {
+				width: 200px;
 				background: gray;
-				cursor:pointer;
+				cursor: pointer;
 			}
-			p{
-				width:200px;
-				height:0;
+			
+			p {
+				width: 200px;
+				height: 0;
 				overflow: hidden;
-				border:1px solid red;
+				border: 1px solid red;
 				transition: height .3s;
+			}
+			
+			span {
+				display: block;
+				height: 500px;
 			}
 		</style>
 	</head>
+
 	<body>
 		<ul>
 			<li>
 				<h5 class="head">标题1</h5>
-				<p class="cont">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+				<p class="cont">
+					<span>
+						内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+					</span>
+				</p>
 			</li>
 			<li>
 				<h5 class="head">标题2</h5>
-				<p class="cont">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+				<p class="cont">
+					<span>
+						内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+					</span>
+				</p>
 			</li>
 			<li>
 				<h5 class="head">标题3</h5>
-				<p class="cont">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+				<p class="cont">
+					<span>
+						内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+					</span>
+				</p>
 			</li>
 		</ul>
 		<script>
 			var heads = document.querySelectorAll('.head');
 			var conts = document.querySelectorAll('.cont');
-			for(let i=0;i<heads.length;i++){
-				heads[i].onclick=function(){
-					for(let j=0;j<conts.length;j++){
-						if(i==j){
+			for(let i = 0; i < heads.length; i++) {
+				heads[i].onclick = function() {
+					for(let j = 0; j < conts.length; j++) {
+						if(i == j) {
 							console.log(conts[j].scrollHeight)
-							conts[j].style.height = conts[j].scrollHeight+'px';
-						}else{
+							conts[j].style.height = conts[j].scrollHeight + 'px';
+						} else {
 							conts[j].style.height = 0;
 						}
-						
+
 					}
 				}
 			}
 		</script>
 	</body>
+
 </html>
