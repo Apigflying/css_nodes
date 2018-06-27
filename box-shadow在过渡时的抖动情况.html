@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		background: #e7e7e7;
+	}
+	div{
+		width:300px;
+		margin:10px auto;
+		height:400px;
+		background: #fff;
+		transition:1s;
+		/*box-shadow:0 4px 10px transparent;*/
+	}
+	div:hover{
+		box-shadow:0 4px 10px #999;
+	}
+</style>
+</head>
+<body>
+	<div>
+	在不加初始的box-shadow的情况下，hover到元素上，box-shadow会有抖动的情况，加上初始的透明的box-shadow就不会有这种情况了
+	</div>
+</body>
+</html>
