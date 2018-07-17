@@ -17,12 +17,21 @@
 			}
 			p {
 				width: 200px;
+				/*
+					wrap元素的高度是0
+				*/
 				height: 0;
 				overflow: hidden;
 				border: 1px solid red;
+				/*
+					添加过渡效果
+				*/
 				transition: height .3s;
 			}
 			span {
+				/*
+					content元素的高度需要指定,此时的content高度，就是wrap的scrollHeight
+				*/
 				display: block;
 				height: 500px;
 			}
@@ -33,24 +42,24 @@
 		<ul>
 			<li>
 				<h5 class="head">标题1</h5>
-				<p class="cont">
-					<span>
+				<p class="wrap">
+					<span class="content">
 						内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
 					</span>
 				</p>
 			</li>
 			<li>
 				<h5 class="head">标题2</h5>
-				<p class="cont">
-					<span>
+				<p class="wrap">
+					<span class="content">
 						内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
 					</span>
 				</p>
 			</li>
 			<li>
 				<h5 class="head">标题3</h5>
-				<p class="cont">
-					<span>
+				<p class="wrap">
+					<span class="content">
 						内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
 					</span>
 				</p>
@@ -58,17 +67,18 @@
 		</ul>
 		<script>
 			var heads = document.querySelectorAll('.head');
-			var conts = document.querySelectorAll('.cont');
+			var wraps = document.querySelectorAll('.wrap');
+			// 内容高度 存在，容器高度为0；此时容器的scrollHeight就是内容应该有的高度
+			console.log(wraps[1].scrollHeight)
 			for(let i = 0; i < heads.length; i++) {
 				heads[i].onclick = function() {
-					for(let j = 0; j < conts.length; j++) {
+					for(let j = 0; j < wraps.length; j++) {
 						if(i == j) {
-							console.log(conts[j].scrollHeight)
-							conts[j].style.height = conts[j].scrollHeight + 'px';
+							console.log(wraps[j].scrollHeight)
+							wraps[j].style.height = wraps[j].scrollHeight + 'px';
 						} else {
-							conts[j].style.height = 0;
+							wraps[j].style.height = 0;
 						}
-
 					}
 				}
 			}
