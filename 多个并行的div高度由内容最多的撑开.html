@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>多个并行的div高度由内容最多的撑开</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    *{
+      padding:0;
+      margin:0;
+    }
+    h1{
+      width:1000px;
+      margin:20px auto;
+    }
+    .wrap{
+      width:1000px;
+      margin:0 auto;
+      display:flex;
+      justify-content: space-between;
+    }
+    .content{
+      width:30%;
+      overflow: hidden;
+      border-bottom:1px solid #000;
+    }
+    .article{
+      border:1px solid #000;
+      padding-bottom:10000px;
+      margin-bottom:-9990px;
+    }
+    .otherBlock{
+      width:1000px;
+      margin:0 auto;
+      display:flex;
+      justify-content: center;
+    }
+    .btn{
+      margin:40px auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    多个并行的div高度由内容最多的撑开
+  </h1>
+  <div class="wrap">
+    <div class="content">
+      <h4>4级标题</h4>
+      <p class="article">
+        这是一些文字。这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字这是一些文字
+      </p>
+    </div>
+    <div class="content">
+      <h4>4级标题</h4>
+      <p class="article">
+        这是一些文字。
+      </p>
+    </div>
+    <div class="content">
+      <h4>4级标题</h4>
+      <p class="article">
+        这是一些文字。
+      </p>
+    </div>
+  </div>
+  <!-- 下面的内容 -->
+  <div class="otherBlock">
+    <input type="button" value="按钮" class="btn"/>
+  </div>
+</body>
+</html>
