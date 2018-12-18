@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+				list-style: none;
+			}
+			li{
+				width:400px;
+				padding:10px;
+				border:1px solid #ccc;
+				border-radius: 10px;
+				float:left;
+				margin-right: 20px;
+			}
+			div{
+				width:120px;
+				height:120px;
+			}
+			img{
+				width:100%;
+				height:100%;
+				/*
+					添加下面两行样式，可以让不同分辨率的图片，依照图片宽高中最窄的一边铺满容器，另一个方向上居中展示
+				 */
+				object-fit:cover;
+				object-position: center;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<div>
+					<img src="http://images.chenxuanyu.com/WechatIMG1.jpeg" alt="">
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src="http://images.chenxuanyu.com/WechatIMG2.jpeg" alt="">
+				</div>
+			</li>
+		</ul>
+	</body>
+</html>
