@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!--
+    preload 属性规定是否在页面加载后载入视频。如果设置了 autoplay 属性，则忽略该属性。 在微信端
+    在pc端可以正常自动播放(muted静音)
+      
+      在移动端可以正常展示,
+  
+   -->
+  <video preload="metadata" muted="muted" autoplay loop webkit-playsinline playsinline x-webkit-airplay='allow'
+    x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portraint" poster="">
+    <source src="" type="video/mp4">
+  </video>
+</body>
+
+</html>

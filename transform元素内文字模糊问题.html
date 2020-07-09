@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .test{
+      transform: scale(0.7);
+      /* 解决transfrom,文字(图标)会变模糊的问题 */
+      /* -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transform: translateZ(0) perspective(1px) scale(0.5);
+      -moz-transform: translateZ(0) perspective(1px) scale(0.5);
+      -ms-transform: translateZ(0) perspective(1px) scale(0.5);
+      -o-transform: translateZ(0) perspective(1px) scale(0.5);
+      transform: translateZ(0) perspective(1px) scale(0.5); */
+      transform-origin: top center;
+    }
+    button{
+      width:50px;
+      height:50px;
+      text-align: center;
+      line-height: 50px;
+    }
+    input{
+      width:200px;
+      height:50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="test">
+    <button>-</button>
+    <div class="le">lfkdjsafdjsaofjdioajfidosyvxuiqicnkjxal就离开的撒娇覅藕断覅瓯都市</div>
+    <button>+</button>
+  </div>
+</body>
+</html>
