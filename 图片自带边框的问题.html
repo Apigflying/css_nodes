@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      opacity: 0;
+    }
+
+    .user-pic {
+      display: inline-block;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      overflow: hidden;
+      /* border没有生效 */
+      border: none; 
+    }
+
+    /* 当图片有src属性时，显示出来 */
+    .user-pic[src] {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+
+    问题：在页面加载图片的时候，发现图片在没有加载到时，自带了灰色的边框，并且这个边框无法使用`border:none`去掉
+    调试：使用NetWork throttling :Fast 3G模式
+
+    现象：在初始加载的时候，`img`标签没有`src`属性，此时就会显示灰色边框
+
+    解决：
+    **要选择没有src属性的元素，让它`消失`**
+    查询属性选择器，没有对应的选择器，所以先让元素隐藏，等到有src属性时再展示出来
+  </p>
+
+
+</body>
+
+</html>
